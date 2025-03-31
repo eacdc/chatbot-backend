@@ -54,6 +54,11 @@ mongoose
     process.exit(1); // Exit process if DB fails
   });
 
+
+app.get('/', (req, res) => {
+  res.send('Chatbot API is running!');
+  // Or you could serve an HTML page or documentation
+});
 // ✅ Fetch chapters by bookId API (Newly Added)
 const Chapter = require("./models/Chapter");
 app.get("/api/books/:bookId/chapters", async (req, res) => {
